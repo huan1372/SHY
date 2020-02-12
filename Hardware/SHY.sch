@@ -2347,6 +2347,7 @@ type 0207, grid 10 mm</description>
 <part name="U1" library="LinnesLab-Microcontrollers" deviceset="ARTEMIS.CAST" device=""/>
 <part name="GND10" library="LinnesLab-Symbols" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="SUPPLY7" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2425,8 +2426,8 @@ type 0207, grid 10 mm</description>
 <instance part="GND8" gate="G$1" x="-187.96" y="91.44" smashed="yes">
 <attribute name="VALUE" x="-187.96" y="91.186" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="-106.68" y="99.06" smashed="yes">
-<attribute name="VALUE" x="-106.68" y="101.854" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY1" gate="G$1" x="-106.68" y="104.14" smashed="yes">
+<attribute name="VALUE" x="-106.68" y="106.934" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="SUPPLY2" gate="VDD" x="-165.1" y="104.14" smashed="yes">
 <attribute name="VALUE" x="-165.1" y="106.934" size="1.778" layer="96" align="bottom-center"/>
@@ -2468,6 +2469,9 @@ type 0207, grid 10 mm</description>
 <instance part="GND11" gate="1" x="-81.28" y="88.9" smashed="yes">
 <attribute name="VALUE" x="-83.82" y="86.36" size="1.778" layer="96"/>
 </instance>
+<instance part="SUPPLY7" gate="G$1" x="-78.74" y="106.68" smashed="yes">
+<attribute name="VALUE" x="-78.74" y="109.474" size="1.778" layer="96" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -2485,16 +2489,6 @@ type 0207, grid 10 mm</description>
 <pinref part="CHRG1" gate="G$1" pin="PROG"/>
 <wire x1="-109.22" y1="50.8" x2="-109.22" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="-109.22" y1="53.34" x2="-119.38" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="3.3V" class="0">
-<segment>
-<pinref part="LDO1" gate="G$1" pin="OUT"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="-121.92" y1="99.06" x2="-106.68" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-106.68" y1="99.06" x2="-106.68" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="SUPPLY1" gate="G$1" pin="3.3V"/>
-<junction x="-106.68" y="99.06"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -2657,6 +2651,23 @@ type 0207, grid 10 mm</description>
 <pinref part="U$1" gate="G$1" pin="SCL"/>
 <wire x1="-50.8" y1="93.98" x2="-48.26" y2="93.98" width="0.1524" layer="91"/>
 <label x="-48.26" y="93.98" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="3.3V" class="0">
+<segment>
+<pinref part="LDO1" gate="G$1" pin="OUT"/>
+<pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="-121.92" y1="99.06" x2="-106.68" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-106.68" y1="99.06" x2="-106.68" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="SUPPLY1" gate="G$1" pin="3.3V"/>
+<wire x1="-106.68" y1="104.14" x2="-106.68" y2="99.06" width="0.1524" layer="91"/>
+<junction x="-106.68" y="99.06"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="VCC"/>
+<pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
+<wire x1="-76.2" y1="93.98" x2="-78.74" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="-78.74" y1="93.98" x2="-78.74" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
