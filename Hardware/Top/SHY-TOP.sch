@@ -5058,6 +5058,7 @@ http://ww1.microchip.com/downloads/en/DeviceDoc/MIC550X.pdf&lt;/il&gt;
 <part name="SUPPLY1" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
 <part name="SUPPLY7" library="LinnesLab-Symbols" deviceset="3.3V" device=""/>
 <part name="J1" library="LinnesLab-Connectors" deviceset="CONN_07" device=""/>
+<part name="GPS.PWR" library="LinnesLab-Power" deviceset="MIC5504" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5571,6 +5572,10 @@ way dynamically.</text>
 <instance part="J1" gate="G$1" x="-55.88" y="162.56" smashed="yes">
 <attribute name="VALUE" x="-60.96" y="152.654" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="-60.96" y="175.768" size="1.778" layer="95" font="vector"/>
+</instance>
+<instance part="GPS.PWR" gate="G$1" x="152.4" y="195.58" smashed="yes">
+<attribute name="NAME" x="149.86" y="209.55" size="1.778" layer="95"/>
+<attribute name="VALUE" x="144.78" y="185.42" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -6694,6 +6699,18 @@ way dynamically.</text>
 <pinref part="U3" gate="G$1" pin="/RES"/>
 <wire x1="350.52" y1="314.96" x2="345.44" y2="314.96" width="0.1524" layer="91"/>
 <label x="345.44" y="314.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="D2/GPS.PWR" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="P0.02/AIN0"/>
+<wire x1="83.82" y1="271.78" x2="83.82" y2="269.24" width="0.1524" layer="91"/>
+<label x="83.82" y="269.24" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+<segment>
+<pinref part="GPS.PWR" gate="G$1" pin="EN"/>
+<wire x1="142.24" y1="190.5" x2="139.7" y2="190.5" width="0.1524" layer="91"/>
+<label x="139.7" y="190.5" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
